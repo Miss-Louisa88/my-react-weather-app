@@ -63,19 +63,19 @@ function App() {
           target="_blank"
           rel="noreferrer"
         >
-          Louise Adera
+          : Louise Adera
         </a>
         , is
         <a
-          href="https://github.com/Miss-Louisa88/MyVanilla-Weather-Project--jsVanilla"
+          href="https://github.com/Miss-Louisa88/my-react-weather-app"
           target="_blank"
           rel="noreferrer"
         >
           open-sourced on GitHub
         </a>
-        and
+        , and
         <a
-          href="https://louiseweatherforecast.netlify.app/"
+          href="https://louisereactjsweather.netlify.app/"
           target="_blank"
           rel="noreferrer"
         >
