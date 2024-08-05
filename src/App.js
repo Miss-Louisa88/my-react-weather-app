@@ -1,23 +1,79 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Weather from "./Weather";
 
 function App() {
+  ///Get access to the input value
+  let [city, setCity] = useState("");
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <form className="SearchForm" onSubmit={handleSubmit}>
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            className="SearchInput"
+            onChange={updateCity}
+          />
+          <input type="submit" value="Search" className="SearchButton" />
+        </form>
       </header>
+      <main>
+        <div className="WeatherData">
+          <div>
+            <h1 className="WeatherCity">{city}</h1>
+            <p className="WeatherDetails">
+              <span className="Time"></span>
+              <span className="Description"></span>
+              <br />
+              Humidity: 8 % <strong className="Humidity"></strong>, Wind: 88
+              km/hr
+              <strong className="WindSpeed"></strong>
+            </p>
+          </div>
+          <div className="WeatherAppTemperatureContainer">
+            <div className="Icon"></div>
+            <div className="WeatherTemperature">28</div>
+            <div className="WeatherUnit">°C</div>
+          </div>
+        </div>
+        <div className="WeatherForecast"></div>
+        <Weather />
+      </main>
+
+      <footer>
+        This project was coded by
+        <a
+          href="https://github.com/Miss-Louisa88"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Louise Adera
+        </a>
+        , is
+        <a
+          href="https://github.com/Miss-Louisa88/MyVanilla-Weather-Project--jsVanilla"
+          target="_blank"
+          rel="noreferrer"
+        >
+          open-sourced on GitHub
+        </a>
+        and
+        <a
+          href="https://louiseweatherforecast.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          hosted on Netlify
+        </a>
+      </footer>
     </div>
   );
 }
