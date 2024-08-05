@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Weather from "./Weather";
+import ReactAnimatedWeather from "react-animated-weather";
 
 function App() {
   ///Get access to the input value
@@ -39,7 +40,14 @@ function App() {
             </p>
           </div>
           <div className="WeatherAppTemperatureContainer">
-            <div className="Icon"></div>
+            <div className="Icon">
+              <ReactAnimatedWeather
+                icon="CLEAR_DAY"
+                color="orange"
+                size={50}
+                animate={true}
+              />
+            </div>
             <div className="WeatherTemperature">28</div>
             <div className="WeatherUnit">°C</div>
           </div>
