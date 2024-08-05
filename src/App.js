@@ -43,7 +43,7 @@ function App() {
             <div className="Icon">
               <ReactAnimatedWeather
                 icon="CLEAR_DAY"
-                color="orange"
+                color="darkorange"
                 size={50}
                 animate={true}
               />
