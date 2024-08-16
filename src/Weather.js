@@ -3,8 +3,6 @@ import "./Weather.css";
 import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather() {
-  ///Display the Weekdays/ City Name on Screen✅
-  /// Parsing the days ✅
   let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri"];
   return (
     <div className="ForecastDay">
