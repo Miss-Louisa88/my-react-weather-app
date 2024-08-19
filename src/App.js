@@ -9,7 +9,3 @@ export default function App() {
     </div>
   );
 }
-/// get access to the json objects
-/// create an event that displays the real data on the screen
-///format the dates given from API
-///display animated icons
