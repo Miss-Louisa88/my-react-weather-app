@@ -86,6 +86,6 @@ export default function App() {
     );
   } else {
     Search();
-    return "Loading...";
+    return "Loading the city...";
   }
 }
