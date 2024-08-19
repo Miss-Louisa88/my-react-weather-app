@@ -1,8 +1,7 @@
 import React from "react";
 import "./Weather.css";
-import ReactAnimatedWeather from "react-animated-weather";
-
-export default function Weather() {
+import WeatherIcon from "./WeatherIcon";
+export default function Weather(props) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri"];
   return (
     <div className="ForecastDay">
@@ -11,18 +10,17 @@ export default function Weather() {
           return (
             <li key={index}>
               <div className="ForecastDate"> {day}</div>
+              <WeatherIcon code={props.data.icon} size={45} />
 
-              <ReactAnimatedWeather
-                icon="RAIN"
-                color="lightblue"
-                size={50}
-                animate={true}
-              />
               <div className="ForecastTemperatures">
                 <div className="ForecastTemperature">
-                  <strong>28ºC</strong>
+                  <strong>{Math.round(props.data.temperature)}ºC</strong>
                 </div>
-                <div className="ForecastTemperature">8ºC</div>
+                <div className="ForecastTemperature">
+                  <a href="-" rel="norefferer" className="Farenheight">
+                    °F
+                  </a>
+                </div>
               </div>
             </li>
           );
